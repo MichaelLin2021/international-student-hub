@@ -9,6 +9,23 @@ body {
     color: #222;
 }
 
+.navbar {
+    background-color: #003b5c;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
 header {
     background-color: #003b5c;
     color: white;
