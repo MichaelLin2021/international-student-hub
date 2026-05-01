@@ -114,3 +114,18 @@ footer {
     padding: 20px;
     color: #666;
 }
+
+/* Button Link */
+.button-link {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #003b5c;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button-link:hover {
+    background: #005b8f;
+}
