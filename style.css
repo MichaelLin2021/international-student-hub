@@ -50,9 +50,11 @@ section {
     border-radius: 12px;
     border: 1px solid #ddd;
     font-weight: bold;
+    transition: 0.2s;
 }
 
 .card:hover {
+    transform: translateY(-3px);
     background-color: #eaf4f8;
 }
 
