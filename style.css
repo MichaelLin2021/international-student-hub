@@ -67,3 +67,11 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+h2 {
+    margin-top: 30px;
+}
+
+section {
+    padding: 10px 0;
+}
