@@ -34,18 +34,19 @@ body {
 header {
     background: linear-gradient(135deg, #003b5c, #005b8f);
     color: white;
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
-h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
+header h1 {
+    font-size: 38px;
+    font-weight: bold;
 }
 
-h2 {
-    margin-bottom: 15px;
-    color: #003b5c;
+header p {
+    color: #e6f4ff;
+    font-size: 17px;
+    margin-top: 5px;
 }
 
 /* Layout */
@@ -133,4 +134,21 @@ footer {
 .card[href^="http"]::after {
     content: " ↗";
     font-size: 12px;
+}
+
+.search-section {
+    text-align: center;
+}
+
+.search-section p {
+    margin-bottom: 15px;
+}
+
+.external::after {
+    content: " ↗";
+    font-size: 13px;
+}
+
+section p {
+    line-height: 1.6;
 }
