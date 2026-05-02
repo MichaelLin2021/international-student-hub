@@ -1,24 +1,19 @@
-# International Student Hub
+Project: International Student Hub
 
-This is a final year project prototype designed to support international students at UEA.
+Description:
+This project is a web-based prototype designed to support international students at UEA.
 
-## Project Aim
+How to run:
+1. Open index.html in a web browser
+OR
+2. Visit GitHub Pages link: [your link]
 
-The aim of this project is to design and evaluate a digital International Student Hub that helps international students access essential information about settling into life in the UK.
+Contents:
+- HTML files (website pages)
+- CSS (style.css)
+- JavaScript (script.js)
+- Questionnaire data
+- Report
 
-## Current Features
-
-- Homepage
-- Search bar layout
-- Key service categories
-- Responsive design structure
-
-## Technologies Used
-
-- HTML
-- CSS
-- JavaScript
-
-## How to Run
-
-Open `index.html` in a web browser.
+Notes:
+This is a prototype system and some features (e.g., search, language translation) are partially implemented.
