@@ -12,24 +12,48 @@ body {
 
 .navbar {
     background-color: #003b5c;
-    padding: 14px;
-    text-align: center;
+    padding: 12px 20px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 10;
 }
 
-.navbar a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
+.nav-left {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
 }
 
-.navbar a:hover {
+.nav-left a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-left a:hover {
     text-decoration: underline;
 }
 
+.nav-right {
+    grid-column: 3;
+    justify-self: end;
+}
+
+.language-select {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    color: #003b5c;
+    background: white;
+    cursor: pointer;
+}
 header {
     background: linear-gradient(135deg, #003b5c, #005b8f);
     color: white;
