@@ -129,3 +129,8 @@ footer {
 .button-link:hover {
     background: #005b8f;
 }
+
+.card[href^="http"]::after {
+    content: " ↗";
+    font-size: 12px;
+}
