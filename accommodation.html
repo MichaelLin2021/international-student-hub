@@ -3,183 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accommodation Guide</title>
+    <title>Accommodation Guide - International Student Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<nav class="navbar">
-    <div class="nav-left">
-        <a href="index.html">Home</a>
-        <a href="guide.html">Guide</a>
-        <a href="accommodation.html">Accommodation</a>
-        <a href="banking.html">Banking</a>
-        <a href="transport.html">Transport</a>
-        <a href="map.html">Map</a>
-        <a href="faq.html">FAQ</a>
-        <a href="events.html">Events</a>
-        <a href="visa.html">Visa Support</a>
-    </div>
+<nav class="navbar" aria-label="Primary navigation">
+    <div class="nav-inner">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">ISH</span>
+            <span>
+                <strong>International Student Hub</strong>
+                <small>UEA arrival support</small>
+            </span>
+        </a>
 
-    <div class="nav-right">
-        <select class="language-select" onchange="changeLanguage(this.value)">
-            <option value="en">🌐 English</option>
-            <option value="zh">🇨🇳 中文</option>
-            <option value="ar">🇸🇦 العربية</option>
-            <option value="hi">🇮🇳 हिन्दी</option>
-            <option value="vi">🇻🇳 Tiếng Việt</option>
-        </select>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Guide</button>
+                <div class="nav-dropdown-menu">
+                    <a href="guide.html">New Student Guide</a>
+                    <a href="accommodation.html">Accommodation</a>
+                    <a href="banking.html">Banking</a>
+                    <a href="transport.html">Transport</a>
+                    <a href="map.html">Campus Map</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+            <a href="events.html">Events</a>
+            <a href="visa.html">Visa</a>
+            <button class="nav-chat-link" type="button" data-chat-open>Ask Hub</button>
+        </div>
+
+        <div class="nav-actions">
+            <select class="language-select" aria-label="Language preference">
+                <option value="en">English</option>
+                <option value="zh">Chinese</option>
+                <option value="th">Thai (future work)</option>
+                <option value="vi">Vietnamese (future work)</option>
+            </select>
+        </div>
     </div>
 </nav>
 
-<header>
-    <h1>Accommodation Guide</h1>
-    <p>Practical housing guidance for international students in Norwich.</p>
+<header class="page-hero">
+    <div class="content-wrap">
+        <span class="eyebrow">Housing decisions</span>
+        <h1>Accommodation Guide</h1>
+        <p>Compare common UEA and Norwich housing options, understand what to check before signing, and choose a place that fits your first year.</p>
+    </div>
 </header>
 
-<main>
+<main id="main-content">
+    <section class="content-band surface filter-section">
+        <div class="content-wrap">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow muted">Compare options</span>
+                    <h2>Accommodation Finder</h2>
+                    <p>Use the filters to focus on the options most relevant to your situation.</p>
+                </div>
+                <a class="button-link secondary" href="https://www.uea.ac.uk/uea-life/accommodation" target="_blank" rel="noopener">Official UEA accommodation</a>
+            </div>
 
-<section>
-    <h2>UEA On-Campus Accommodation</h2>
-    <p>UEA provides over 3,600 rooms on campus, offering a convenient and supportive environment for students.</p>
+            <div class="filter-bar" aria-label="Accommodation filters">
+                <button class="filter-chip active" type="button" data-filter="all">All</button>
+                <button class="filter-chip" type="button" data-filter="campus">On campus</button>
+                <button class="filter-chip" type="button" data-filter="city">City centre</button>
+                <button class="filter-chip" type="button" data-filter="budget">Budget aware</button>
+                <button class="filter-chip" type="button" data-filter="social">Social facilities</button>
+            </div>
 
-    <div class="info-grid">
+            <div class="card-grid">
+                <article class="option-card" data-category="campus budget">
+                    <span class="badge">On campus</span>
+                    <h3>UEA Residences</h3>
+                    <p>Good for students who want the simplest first-year setup, short walks to teaching spaces and direct access to campus support.</p>
+                    <ul>
+                        <li>Bills are usually included.</li>
+                        <li>Close to library, teaching and campus services.</li>
+                        <li>Useful if this is your first time living in the UK.</li>
+                    </ul>
+                </article>
 
-        <div class="info-card">
-            <span class="badge">On Campus</span>
-            <h3>Crome, Hickling & Barton Houses</h3>
-            <p>Modern UEA residences with en-suite rooms and shared kitchens.</p>
-            <ul>
-                <li>Ensuite bedrooms with shared living space</li>
-                <li>Close to lectures and library</li>
-                <li>No commuting cost</li>
-            </ul>
+                <article class="option-card" data-category="campus social">
+                    <span class="badge">On campus</span>
+                    <h3>Crome, Hickling and Barton Houses</h3>
+                    <p>Modern campus residences with en-suite room options and shared kitchen facilities.</p>
+                    <ul>
+                        <li>Convenient for lectures and societies.</li>
+                        <li>Resident Life support nearby.</li>
+                        <li>No daily commuting cost.</li>
+                    </ul>
+                </article>
+
+                <article class="option-card" data-category="city social">
+                    <span class="badge amber">City centre</span>
+                    <h3>Crown Place</h3>
+                    <p>Private student accommodation in Norwich city centre, suitable for students who want strong social spaces and quick city access.</p>
+                    <ul>
+                        <li>Studios, en-suite rooms and shared flats.</li>
+                        <li>Gym, cinema, games area and study spaces.</li>
+                        <li>Approx. 25 minutes to UEA by bus.</li>
+                    </ul>
+                    <a href="https://www.collegiate-ac.com/uk-student-accommodation/norwich/crown-place/" target="_blank" rel="noopener">View provider</a>
+                </article>
+
+                <article class="option-card" data-category="city social">
+                    <span class="badge amber">City centre</span>
+                    <h3>Pablo Fanque House</h3>
+                    <p>A modern private hall option with en-suite rooms, studios and shared facilities for students who prefer city living.</p>
+                    <ul>
+                        <li>Study rooms, gym and social spaces.</li>
+                        <li>Approx. 20 to 30 minutes to UEA by bus.</li>
+                        <li>Useful for students who want private halls rather than campus halls.</li>
+                    </ul>
+                    <a href="https://www.capitolstudents.com/locations/norwich/pablo-fanque-house/" target="_blank" rel="noopener">View provider</a>
+                </article>
+
+                <article class="option-card" data-category="city budget">
+                    <span class="badge coral">Private</span>
+                    <h3>St Crispin's House</h3>
+                    <p>A private student accommodation option that may suit students comparing lower-cost city accommodation.</p>
+                    <ul>
+                        <li>En-suite and studio options.</li>
+                        <li>Check travel time to UEA before booking.</li>
+                        <li>Compare contract length and total cost.</li>
+                    </ul>
+                </article>
+
+                <article class="option-card" data-category="city budget">
+                    <span class="badge coral">Private</span>
+                    <h3>Benedicts Gate</h3>
+                    <p>Private accommodation near the city centre, useful for students comparing cost, facilities and transport access.</p>
+                    <ul>
+                        <li>En-suite and studio options.</li>
+                        <li>Good access to city facilities.</li>
+                        <li>Check bus routes and contract details.</li>
+                    </ul>
+                </article>
+            </div>
         </div>
+    </section>
 
-        <div class="info-card">
-            <span class="badge">On Campus</span>
-            <h3>General UEA Accommodation</h3>
-            <p>Ideal for first-year and international students.</p>
-            <ul>
-                <li>Bills included (internet, gas, electricity)</li>
-                <li>On-site security and maintenance</li>
-                <li>Support from Resident Life team</li>
-            </ul>
+    <section class="content-band">
+        <div class="content-wrap two-col">
+            <div>
+                <span class="eyebrow muted">Decision guide</span>
+                <h2>How to Choose</h2>
+                <div class="compare-list">
+                    <div class="compare-row">
+                        <strong>First time in the UK</strong>
+                        <span>On-campus accommodation can reduce uncertainty and commuting pressure.</span>
+                        <span>Best for support</span>
+                    </div>
+                    <div class="compare-row">
+                        <strong>Prefer city life</strong>
+                        <span>Private halls may be closer to shops, restaurants and social venues.</span>
+                        <span>Best for independence</span>
+                    </div>
+                    <div class="compare-row">
+                        <strong>Lower budget</strong>
+                        <span>Compare rent, bills, deposits, transport and contract length together.</span>
+                        <span>Best for planning</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="callout critical">
+                <h2>Before You Pay</h2>
+                <ul>
+                    <li>Verify the provider and official website.</li>
+                    <li>Check whether bills and internet are included.</li>
+                    <li>Read cancellation rules and contract length.</li>
+                    <li>Never transfer money to an unverified person or account.</li>
+                </ul>
+            </div>
         </div>
-
-    </div>
-
-    <p>
-        🔗 <a href="https://www.uea.ac.uk/uea-life/accommodation" target="_blank">
-        View official UEA accommodation
-        </a>
-    </p>
-</section>
-
-
-<section>
-    <h2>Private Student Accommodation (City Centre)</h2>
-
-    <div class="info-grid">
-
-        <div class="info-card">
-            <span class="badge">City Centre</span>
-            <h3>Crown Place</h3>
-            <p>Located in Norwich city centre with strong social environment.</p>
-            <ul>
-                <li>Studios, ensuite rooms and shared flats</li>
-                <li>Gym, cinema, games area and social spaces</li>
-                <li>All bills included</li>
-                <li>~25 min bus to UEA</li>
-            </ul>
-            <p>
-                🔗 <a href="https://www.collegiate-ac.com/uk-student-accommodation/norwich/crown-place/" target="_blank">
-                View Crown Place
-                </a>
-            </p>
-        </div>
-
-        <div class="info-card">
-            <span class="badge">City Centre</span>
-            <h3>Pablo Fanque House</h3>
-            <p>Modern accommodation with strong facilities and central location.</p>
-            <ul>
-                <li>Ensuite rooms (shared kitchen)</li>
-                <li>Private studio apartments</li>
-                <li>Gym, cinema, study rooms and social spaces</li>
-                <li>~20–30 min to UEA by bus</li>
-            </ul>
-            <p>
-                🔗 <a href="https://www.capitolstudents.com/locations/norwich/pablo-fanque-house/" target="_blank">
-                View Pablo Fanque House
-                </a>
-            </p>
-        </div>
-
-    </div>
-</section>
-
-
-<section>
-    <h2>Other Popular Options</h2>
-
-    <div class="info-grid">
-
-        <div class="info-card">
-            <span class="badge">Private</span>
-            <h3>St Crispin’s House</h3>
-            <p>Affordable student accommodation in Norwich.</p>
-            <ul>
-                <li>Ensuite and studio rooms</li>
-                <li>Lower price range compared to others</li>
-                <li>Good for budget-conscious students</li>
-            </ul>
-        </div>
-
-        <div class="info-card">
-            <span class="badge">Private</span>
-            <h3>Benedicts Gate</h3>
-            <p>Modern accommodation near city centre.</p>
-            <ul>
-                <li>Ensuite and studio options</li>
-                <li>Good transport access</li>
-                <li>Balanced cost and quality</li>
-            </ul>
-        </div>
-
-    </div>
-</section>
-
-
-<section>
-    <h2>How to Choose (Quick Guide)</h2>
-
-    <ul>
-        <li><strong>First time in UK →</strong> choose UEA on-campus</li>
-        <li><strong>Want social life →</strong> Crown Place</li>
-        <li><strong>Want modern facilities →</strong> Pablo Fanque House</li>
-        <li><strong>Lower budget →</strong> St Crispin’s House</li>
-    </ul>
-
-</section>
-
-
-<section>
-    <h2>Important Tips</h2>
-    <ul>
-        <li>Check contract length (usually 40–51 weeks)</li>
-        <li>Confirm bills are included</li>
-        <li>Check distance to UEA and bus routes</li>
-        <li>Never pay before verifying the provider</li>
-    </ul>
-</section>
-
+    </section>
 </main>
 
-<footer>
-    <p>Final Year Project — Qi Lin</p>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p><strong>International Student Hub</strong><br>Final Year Project - Qi Lin</p>
+        <p>Prototype for usability evaluation. Students should confirm live requirements with official UEA, UK government and provider websites.</p>
+    </div>
 </footer>
 
+<div class="toast" data-toast role="status" aria-live="polite"></div>
 <script src="script.js"></script>
 </body>
 </html>

@@ -3,103 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Student Guide</title>
+    <title>New Student Guide - International Student Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<nav class="navbar">
-    <div class="nav-left">
-        <a href="index.html">Home</a>
-        <a href="guide.html">Guide</a>
-        <a href="accommodation.html">Accommodation</a>
-        <a href="banking.html">Banking</a>
-        <a href="transport.html">Transport</a>
-        <a href="map.html">Map</a>
-        <a href="faq.html">FAQ</a>
-        <a href="events.html">Events</a>
-        <a href="visa.html">Visa Support</a>
-    </div>
+<nav class="navbar" aria-label="Primary navigation">
+    <div class="nav-inner">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">ISH</span>
+            <span>
+                <strong>International Student Hub</strong>
+                <small>UEA arrival support</small>
+            </span>
+        </a>
 
-    <div class="nav-right">
-        <select class="language-select" onchange="changeLanguage(this.value)">
-            <option value="en">🌐 English</option>
-            <option value="zh">🇨🇳 中文</option>
-            <option value="ar">🇸🇦 العربية</option>
-            <option value="hi">🇮🇳 हिन्दी</option>
-            <option value="vi">🇻🇳 Tiếng Việt</option>
-        </select>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Guide</button>
+                <div class="nav-dropdown-menu">
+                    <a href="guide.html">New Student Guide</a>
+                    <a href="accommodation.html">Accommodation</a>
+                    <a href="banking.html">Banking</a>
+                    <a href="transport.html">Transport</a>
+                    <a href="map.html">Campus Map</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+            <a href="events.html">Events</a>
+            <a href="visa.html">Visa</a>
+            <button class="nav-chat-link" type="button" data-chat-open>Ask Hub</button>
+        </div>
+
+        <div class="nav-actions">
+            <select class="language-select" aria-label="Language preference">
+                <option value="en">English</option>
+                <option value="zh">Chinese</option>
+                <option value="th">Thai (future work)</option>
+                <option value="vi">Vietnamese (future work)</option>
+            </select>
+        </div>
     </div>
 </nav>
 
-<header>
-    <h1>New Student Guide</h1>
-    <p>Step-by-step support for your first weeks at UEA.</p>
+<header class="page-hero">
+    <div class="content-wrap">
+        <span class="eyebrow">Arrival roadmap</span>
+        <h1>New Student Guide</h1>
+        <p>A structured first-weeks plan for registration, accommodation, money, healthcare and getting settled at UEA.</p>
+    </div>
 </header>
 
-<main>
+<main id="main-content">
+    <section class="content-band surface">
+        <div class="content-wrap">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow muted">Step-by-step</span>
+                    <h2>Arrival Timeline</h2>
+                    <p>Tasks are grouped by when students are likely to need them, reducing cognitive load during a busy arrival period.</p>
+                </div>
+            </div>
 
-<section>
-    <h2>Essential First Steps</h2>
-    <div class="info-grid">
-        <div class="info-card">
-            <span class="badge">Step 1</span>
-            <h3>Complete Registration</h3>
-            <ul>
-                <li>Check your UEA email.</li>
-                <li>Complete online enrolment.</li>
-                <li>Collect your student ID.</li>
-            </ul>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="when">Before travel</div>
+                    <div>
+                        <h3>Prepare your essentials</h3>
+                        <p class="muted">Check visa documents, accommodation confirmation, travel plans, university email access and emergency contacts.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="when">Day 1</div>
+                    <div>
+                        <h3>Arrive and get connected</h3>
+                        <p class="muted">Move into accommodation, save your UK address, connect to Wi-Fi and check your UEA email for registration instructions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="when">Week 1</div>
+                    <div>
+                        <h3>Complete university tasks</h3>
+                        <p class="muted">Complete online enrolment, collect your student ID, check Blackboard and confirm any right-to-study requirements.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="when">Week 2</div>
+                    <div>
+                        <h3>Set up everyday life</h3>
+                        <p class="muted">Open a bank account, register with a GP, learn local bus routes and attend welcome events.</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="info-card">
-            <span class="badge">Step 2</span>
-            <h3>Arrange Accommodation</h3>
-            <ul>
-                <li>Confirm your move-in date.</li>
-                <li>Check rent, deposit and bills.</li>
-                <li>Save your address.</li>
-            </ul>
+    <section class="content-band">
+        <div class="content-wrap">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow muted">Core tasks</span>
+                    <h2>First-Week Checklist</h2>
+                    <p>Each card links to a more detailed section of the hub.</p>
+                </div>
+            </div>
+
+            <div class="grid">
+                <a class="card" href="accommodation.html">
+                    <span class="card-label">Housing</span>
+                    <strong>Confirm your accommodation</strong>
+                    <p>Check move-in date, address, rent, deposit, bills and local transport options.</p>
+                </a>
+                <a class="card" href="banking.html">
+                    <span class="card-label amber">Banking</span>
+                    <strong>Prepare documents</strong>
+                    <p>Collect ID, student confirmation and address documents before applying.</p>
+                </a>
+                <a class="card" href="transport.html">
+                    <span class="card-label coral">Travel</span>
+                    <strong>Learn your main routes</strong>
+                    <p>Find buses between UEA, the city centre and Norwich railway station.</p>
+                </a>
+                <a class="card" href="visa.html">
+                    <span class="card-label">Immigration</span>
+                    <strong>Know where to get advice</strong>
+                    <p>Use official UEA and UK government sources for visa-related decisions.</p>
+                </a>
+                <a class="card" href="map.html">
+                    <span class="card-label amber">Campus</span>
+                    <strong>Find support locations</strong>
+                    <p>Locate the library, Students' Union, medical centre, bus stops and central campus.</p>
+                </a>
+                <a class="card" href="events.html">
+                    <span class="card-label coral">Community</span>
+                    <strong>Join events early</strong>
+                    <p>Use events and societies to meet people and feel more confident on campus.</p>
+                </a>
+            </div>
         </div>
+    </section>
 
-        <div class="info-card">
-            <span class="badge">Step 3</span>
-            <h3>Open a Bank Account</h3>
-            <ul>
-                <li>Prepare ID documents.</li>
-                <li>Compare bank options.</li>
-                <li>Apply online or in branch.</li>
-            </ul>
+    <section class="content-band tint">
+        <div class="content-wrap two-col">
+            <div>
+                <span class="eyebrow muted">Practical advice</span>
+                <h2>Helpful Habits</h2>
+                <ul>
+                    <li>Check your UEA email every day during arrival week.</li>
+                    <li>Save Student Services, accommodation and emergency contact details.</li>
+                    <li>Keep digital and paper copies of key documents.</li>
+                    <li>Ask official support teams if immigration, health or finance information is unclear.</li>
+                </ul>
+            </div>
+            <div class="callout">
+                <h3>Design note for evaluation</h3>
+                <p class="muted">This page uses short task groups instead of long text blocks because questionnaire feedback suggested that new students prefer clear steps and quick scanning.</p>
+            </div>
         </div>
-
-        <div class="info-card">
-            <span class="badge">Step 4</span>
-            <h3>Register with a GP</h3>
-            <ul>
-                <li>Find a local GP.</li>
-                <li>Complete registration.</li>
-                <li>Use NHS 111 for urgent advice.</li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2>Useful Tips</h2>
-    <ul>
-        <li>Join student groups early to meet people.</li>
-        <li>Save important contacts such as UEA support services.</li>
-        <li>Check Blackboard and eVision regularly.</li>
-        <li>Attend student events to build confidence and community.</li>
-    </ul>
-</section>
-
+    </section>
 </main>
 
-<footer>
-    <p>Final Year Project — Qi Lin</p>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p><strong>International Student Hub</strong><br>Final Year Project - Qi Lin</p>
+        <p>Prototype for usability evaluation. Students should confirm live requirements with official UEA, UK government and provider websites.</p>
+    </div>
 </footer>
 
+<div class="toast" data-toast role="status" aria-live="polite"></div>
 <script src="script.js"></script>
 </body>
 </html>

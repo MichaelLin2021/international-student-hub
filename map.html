@@ -3,71 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Map</title>
+    <title>Campus Map - International Student Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<nav class="navbar">
-    <div class="nav-left">
-        <a href="index.html">Home</a>
-        <a href="guide.html">Guide</a>
-        <a href="accommodation.html">Accommodation</a>
-        <a href="banking.html">Banking</a>
-        <a href="transport.html">Transport</a>
-        <a href="map.html">Map</a>
-        <a href="faq.html">FAQ</a>
-        <a href="events.html">Events</a>
-        <a href="visa.html">Visa Support</a>
-    </div>
+<nav class="navbar" aria-label="Primary navigation">
+    <div class="nav-inner">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">ISH</span>
+            <span>
+                <strong>International Student Hub</strong>
+                <small>UEA arrival support</small>
+            </span>
+        </a>
 
-    <div class="nav-right">
-        <select class="language-select" onchange="changeLanguage(this.value)">
-            <option value="en">🌐 English</option>
-            <option value="zh">🇨🇳 中文</option>
-            <option value="ar">🇸🇦 العربية</option>
-            <option value="hi">🇮🇳 हिन्दी</option>
-            <option value="vi">🇻🇳 Tiếng Việt</option>
-        </select>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Guide</button>
+                <div class="nav-dropdown-menu">
+                    <a href="guide.html">New Student Guide</a>
+                    <a href="accommodation.html">Accommodation</a>
+                    <a href="banking.html">Banking</a>
+                    <a href="transport.html">Transport</a>
+                    <a href="map.html">Campus Map</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+            <a href="events.html">Events</a>
+            <a href="visa.html">Visa</a>
+            <button class="nav-chat-link" type="button" data-chat-open>Ask Hub</button>
+        </div>
+
+        <div class="nav-actions">
+            <select class="language-select" aria-label="Language preference">
+                <option value="en">English</option>
+                <option value="zh">Chinese</option>
+                <option value="th">Thai (future work)</option>
+                <option value="vi">Vietnamese (future work)</option>
+            </select>
+        </div>
     </div>
 </nav>
 
-<header>
-    <h1>Campus Map</h1>
-    <p>Find important locations around UEA campus.</p>
+<header class="page-hero">
+    <div class="content-wrap">
+        <span class="eyebrow">Campus orientation</span>
+        <h1>Campus Map</h1>
+        <p>Find important UEA locations for study, support, healthcare, transport and student life.</p>
+    </div>
 </header>
 
-<main>
+<main id="main-content">
+    <section class="content-band surface">
+        <div class="content-wrap">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow muted">Interactive prototype</span>
+                    <h2>Key Campus Locations</h2>
+                    <p>Select a location on the prototype map to see why it matters to international students.</p>
+                </div>
+                <a class="button-link secondary" href="https://www.uea.ac.uk/about/campus-map" target="_blank" rel="noopener">Open official UEA map</a>
+            </div>
 
-<section>
-    <h2>Interactive Campus Map</h2>
-    <p>Use the official UEA campus map to find buildings, services and accessibility information.</p>
-    <p><a class="button-link" href="https://www.uea.ac.uk/about/campus-map" target="_blank">Open Official UEA Campus Map</a></p>
-</section>
+            <div class="two-col">
+                <div class="campus-map" data-campus-map aria-label="Prototype campus map">
+                    <div class="map-route" aria-hidden="true"></div>
+                    <div class="map-water" aria-hidden="true"></div>
+                    <button class="map-pin pin-library active" type="button" data-type="Study" data-title="Library" data-description="Study space, books, academic support and online resources. Useful during coursework and exam periods.">Library</button>
+                    <button class="map-pin pin-union" type="button" data-type="Student life" data-title="Students' Union" data-description="Events, societies, student advice, representation and community activities.">Union</button>
+                    <button class="map-pin pin-medical" type="button" data-type="Healthcare" data-title="UEA Medical Centre" data-description="GP registration and healthcare support for students living in the local area.">Medical</button>
+                    <button class="map-pin pin-bus" type="button" data-type="Transport" data-title="Bus Stops" data-description="Use bus stops for journeys between UEA, Norwich city centre and Norwich railway station.">Bus</button>
+                    <button class="map-pin pin-square" type="button" data-type="Campus centre" data-title="The Square" data-description="Central campus meeting area near food, events and key university spaces.">Square</button>
+                </div>
 
-<section>
-    <h2>Key Locations for International Students</h2>
-    <ul>
-        <li><strong>Library:</strong> Study space, books, academic support and resources.</li>
-        <li><strong>Students’ Union:</strong> Events, societies, advice and student support.</li>
-        <li><strong>UEA Medical Centre:</strong> GP registration and healthcare support.</li>
-        <li><strong>Bus Stops:</strong> Travel to Norwich city centre and railway station.</li>
-        <li><strong>Sportspark:</strong> Gym, sports activities and wellbeing facilities.</li>
-        <li><strong>The Square:</strong> Central campus area for meeting friends and finding events.</li>
-    </ul>
-</section>
+                <article class="location-card map-detail" data-map-detail>
+                    <span class="badge">Study</span>
+                    <h3>Library</h3>
+                    <p>Study space, books, academic support and online resources. Useful during coursework and exam periods.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 
-<section>
-    <h2>Prototype Map Placeholder</h2>
-    <p>This prototype links to the official UEA map rather than recreating the full map. A future version could embed a searchable map directly into the hub.</p>
-</section>
+    <section class="content-band">
+        <div class="content-wrap">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow muted">Quick reference</span>
+                    <h2>Why These Places Matter</h2>
+                    <p>This turns the map page from a simple external link into a useful orientation tool.</p>
+                </div>
+            </div>
 
+            <div class="grid">
+                <article class="info-card">
+                    <span class="badge">Study</span>
+                    <h3>Library</h3>
+                    <p>Academic resources, quiet study space and support for learning tools.</p>
+                </article>
+                <article class="info-card">
+                    <span class="badge amber">Support</span>
+                    <h3>Students' Union</h3>
+                    <p>Societies, advice, representation, events and student community.</p>
+                </article>
+                <article class="info-card">
+                    <span class="badge coral">Health</span>
+                    <h3>Medical Centre</h3>
+                    <p>GP registration and healthcare access for students living nearby.</p>
+                </article>
+                <article class="info-card">
+                    <span class="badge">Travel</span>
+                    <h3>Bus Stops</h3>
+                    <p>Connections to the city centre, station and accommodation areas.</p>
+                </article>
+                <article class="info-card">
+                    <span class="badge amber">Community</span>
+                    <h3>The Square</h3>
+                    <p>A central place for meeting people, finding events and orienting yourself.</p>
+                </article>
+                <article class="info-card">
+                    <span class="badge coral">Wellbeing</span>
+                    <h3>Sportspark</h3>
+                    <p>Gym, sports activities and wellbeing facilities near campus.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 </main>
 
-<footer>
-    <p>Final Year Project — Qi Lin</p>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p><strong>International Student Hub</strong><br>Final Year Project - Qi Lin</p>
+        <p>Prototype for usability evaluation. Students should confirm live requirements with official UEA, UK government and provider websites.</p>
+    </div>
 </footer>
 
+<div class="toast" data-toast role="status" aria-live="polite"></div>
 <script src="script.js"></script>
 </body>
 </html>

@@ -7,85 +7,171 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<nav class="navbar">
-    <div class="nav-left">
-        <a href="index.html">Home</a>
-        <a href="guide.html">Guide</a>
-        <a href="accommodation.html">Accommodation</a>
-        <a href="banking.html">Banking</a>
-        <a href="transport.html">Transport</a>
-        <a href="map.html">Map</a>
-        <a href="faq.html">FAQ</a>
-        <a href="events.html">Events</a>
-        <a href="visa.html">Visa Support</a>
-    </div>
+<nav class="navbar" aria-label="Primary navigation">
+    <div class="nav-inner">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">ISH</span>
+            <span>
+                <strong>International Student Hub</strong>
+                <small>UEA arrival support</small>
+            </span>
+        </a>
 
-    <div class="nav-right">
-        <select class="language-select" onchange="changeLanguage(this.value)">
-            <option value="en">🌐 English</option>
-            <option value="zh">🇨🇳 中文</option>
-            <option value="ar">🇸🇦 العربية</option>
-            <option value="hi">🇮🇳 हिन्दी</option>
-            <option value="vi">🇻🇳 Tiếng Việt</option>
-        </select>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Guide</button>
+                <div class="nav-dropdown-menu">
+                    <a href="guide.html">New Student Guide</a>
+                    <a href="accommodation.html">Accommodation</a>
+                    <a href="banking.html">Banking</a>
+                    <a href="transport.html">Transport</a>
+                    <a href="map.html">Campus Map</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+            <a href="events.html">Events</a>
+            <a href="visa.html">Visa</a>
+            <button class="nav-chat-link" type="button" data-chat-open>Ask Hub</button>
+        </div>
+
+        <div class="nav-actions">
+            <select class="language-select" aria-label="Language preference">
+                <option value="en">English</option>
+                <option value="zh">Chinese</option>
+                <option value="th">Thai (future work)</option>
+                <option value="vi">Vietnamese (future work)</option>
+            </select>
+        </div>
     </div>
 </nav>
 
-<header>
-<h1 id="title">International Student Hub</h1>
-<p id="subtitle">Helping international students settle into life at UEA and in the UK.</p>
+<header class="home-hero">
+    <div class="hero-content">
+        <span class="eyebrow">UEA international student support prototype</span>
+        <h1>International Student Hub</h1>
+        <p class="hero-lede">A central place for new international students to find the practical information they need before arrival, during registration and throughout the first weeks in Norwich.</p>
+
+        <div class="hero-search" role="search">
+            <label for="site-search">Find support quickly</label>
+            <div class="search-box">
+                <input id="site-search" type="search" data-site-search placeholder="Search banking, visa, GP, buses, accommodation..." autocomplete="off">
+                <button type="button" data-search-button>Search</button>
+            </div>
+            <div class="search-results" data-search-results aria-live="polite"></div>
+        </div>
+    </div>
 </header>
 
-<main>
+<main id="main-content">
+    <section class="content-band surface">
+        <div class="content-wrap">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow muted">Start here</span>
+                    <h2>Priority Tasks</h2>
+                    <p>Quick routes for the tasks students usually need to complete first.</p>
+                </div>
+                <a class="primary-link" href="guide.html">Open full guide</a>
+            </div>
 
-<section class="search-section">
-    <h2>How can we help?</h2>
-    <p>Search or choose a category below to find useful information quickly.</p>
-    <input class="search" type="text" placeholder="Search information..." onclick="searchInfo()">
-</section>
+            <div class="grid">
+                <a class="card" href="guide.html">
+                    <span class="card-label">First week</span>
+                    <strong>Follow the arrival checklist</strong>
+                    <p>Registration, student ID, GP registration, email, accommodation and core university systems.</p>
+                </a>
 
-<section>
-    <h2>Quick Start</h2>
-    <div class="grid">
-        <a class="card" href="guide.html">📘 New Student Guide</a>
-        <a class="card" href="visa.html">🛂 Visa Support</a>
-    </div>
-</section>
+                <a class="card" href="accommodation.html">
+                    <span class="card-label amber">Housing</span>
+                    <strong>Compare accommodation options</strong>
+                    <p>Check contract length, bills, location, transport and safety before choosing where to live.</p>
+                </a>
 
-<section>
-    <h2>Key Services</h2>
-    <div class="grid">
-        <a class="card" href="accommodation.html">🏠 Accommodation</a>
-        <a class="card" href="banking.html">🏦 Banking</a>
-        <a class="card" href="transport.html">🚌 Transport</a>
-    </div>
-</section>
+                <a class="card" href="banking.html">
+                    <span class="card-label coral">Money</span>
+                    <strong>Prepare for a UK bank account</strong>
+                    <p>Review documents, compare banks and use the checklist before applying online or in branch.</p>
+                </a>
+            </div>
+        </div>
+    </section>
 
-<section>
-    <h2>Student Life</h2>
-    <div class="grid">
-        <a class="card" href="events.html">🎉 Student Events</a>
-        <a class="card" href="faq.html">❓ FAQ</a>
-        <a class="card" href="map.html">🗺️ Campus Map</a>
-    </div>
-</section>
+    <section class="content-band">
+        <div class="content-wrap">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow muted">Designed from user needs</span>
+                    <h2>What the Hub Solves</h2>
+                    <p>The project responds to the problem of useful information being spread across too many platforms.</p>
+                </div>
+            </div>
 
-<section>
-    <h2>UEA Systems</h2>
-    <p>Quick access to important university platforms.</p>
-    <div class="grid">
-        <a class="card external" href="https://blackboard.uea.ac.uk/" target="_blank">Blackboard</a>
-        <a class="card external" href="https://evision.uea.ac.uk/" target="_blank">eVision</a>
-    </div>
-</section>
+            <div class="stat-row">
+                <div class="stat-card">
+                    <strong>1</strong>
+                    <span>Central hub instead of several disconnected starting points.</span>
+                </div>
+                <div class="stat-card">
+                    <strong>6</strong>
+                    <span>Questionnaire responses used to identify common arrival challenges.</span>
+                </div>
+                <div class="stat-card">
+                    <strong>8</strong>
+                    <span>Core support areas covered across the prototype.</span>
+                </div>
+                <div class="stat-card">
+                    <strong>4</strong>
+                    <span>User-centred stages: research, Lo-Fi design, Hi-Fi build and evaluation.</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="content-band tint">
+        <div class="content-wrap two-col">
+            <div>
+                <span class="eyebrow muted">Student life</span>
+                <h2>Support Beyond Arrival</h2>
+                <p class="muted">The hub also helps students find social opportunities, local transport and important campus services after they have completed the basic arrival tasks.</p>
+                <div class="quick-links">
+                    <a class="button-link" href="events.html">Student events</a>
+                    <a class="button-link" href="transport.html">Transport guide</a>
+                    <a class="button-link" href="map.html">Campus map</a>
+                </div>
+            </div>
+
+            <div class="compare-list" aria-label="External university systems">
+                <div class="compare-row">
+                    <strong>Blackboard</strong>
+                    <span>Learning materials, modules and announcements.</span>
+                    <a href="https://blackboard.uea.ac.uk/" target="_blank" rel="noopener">Open</a>
+                </div>
+                <div class="compare-row">
+                    <strong>eVision</strong>
+                    <span>Student records, registration and university administration.</span>
+                    <a href="https://evision.uea.ac.uk/" target="_blank" rel="noopener">Open</a>
+                </div>
+                <div class="compare-row">
+                    <strong>UEA Students' Union</strong>
+                    <span>Societies, support, representation and events.</span>
+                    <a href="https://www.ueasu.org/" target="_blank" rel="noopener">Open</a>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
-<footer>
-    <p>Final Year Project — Qi Lin</p>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p><strong>International Student Hub</strong><br>Final Year Project - Qi Lin</p>
+        <p>Prototype for usability evaluation. Students should confirm live requirements with official UEA, UK government and provider websites.</p>
+    </div>
 </footer>
 
+<div class="toast" data-toast role="status" aria-live="polite"></div>
 <script src="script.js"></script>
 </body>
 </html>

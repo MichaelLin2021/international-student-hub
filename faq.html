@@ -3,93 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>International Student Hub</title>
+    <title>FAQ - International Student Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<nav class="navbar">
-    <div class="nav-left">
-        <a href="index.html">Home</a>
-        <a href="guide.html">Guide</a>
-        <a href="accommodation.html">Accommodation</a>
-        <a href="banking.html">Banking</a>
-        <a href="transport.html">Transport</a>
-        <a href="map.html">Map</a>
-        <a href="faq.html">FAQ</a>
-        <a href="events.html">Events</a>
-        <a href="visa.html">Visa Support</a>
-    </div>
+<nav class="navbar" aria-label="Primary navigation">
+    <div class="nav-inner">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">ISH</span>
+            <span>
+                <strong>International Student Hub</strong>
+                <small>UEA arrival support</small>
+            </span>
+        </a>
 
-    <div class="nav-right">
-        <select class="language-select" onchange="changeLanguage(this.value)">
-            <option value="en">🌐 English</option>
-            <option value="zh">🇨🇳 中文</option>
-            <option value="ar">🇸🇦 العربية</option>
-            <option value="hi">🇮🇳 हिन्दी</option>
-            <option value="vi">🇻🇳 Tiếng Việt</option>
-        </select>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Guide</button>
+                <div class="nav-dropdown-menu">
+                    <a href="guide.html">New Student Guide</a>
+                    <a href="accommodation.html">Accommodation</a>
+                    <a href="banking.html">Banking</a>
+                    <a href="transport.html">Transport</a>
+                    <a href="map.html">Campus Map</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+            <a href="events.html">Events</a>
+            <a href="visa.html">Visa</a>
+            <button class="nav-chat-link" type="button" data-chat-open>Ask Hub</button>
+        </div>
+
+        <div class="nav-actions">
+            <select class="language-select" aria-label="Language preference">
+                <option value="en">English</option>
+                <option value="zh">Chinese</option>
+                <option value="th">Thai (future work)</option>
+                <option value="vi">Vietnamese (future work)</option>
+            </select>
+        </div>
     </div>
 </nav>
 
-
-<header>
-    <h1>FAQ</h1>
-    <p>Common questions from international students</p>
+<header class="page-hero">
+    <div class="content-wrap">
+        <span class="eyebrow">Quick answers</span>
+        <h1>Frequently Asked Questions</h1>
+        <p>Short answers to common questions about arrival, accommodation, healthcare, transport and everyday support.</p>
+    </div>
 </header>
 
-<main>
+<main id="main-content">
+    <section class="content-band surface">
+        <div class="content-wrap two-col">
+            <div>
+                <span class="eyebrow muted">Before arrival</span>
+                <h2>Arrival and Visa</h2>
+                <details open>
+                    <summary>Do I need a visa?</summary>
+                    <p>If you do not already have immigration permission for the UK, you will normally need the correct student immigration route before UEA can formally register you. Check official UEA and UK government guidance.</p>
+                </details>
+                <details>
+                    <summary>Where can I get visa support?</summary>
+                    <p>UEA has International Student Advisers within the Student Life Team. Students can contact them for visa and international student support.</p>
+                </details>
+                <details>
+                    <summary>What should I keep with me when travelling?</summary>
+                    <p>Keep your passport, visa information, accommodation confirmation, university details and emergency contacts accessible during travel.</p>
+                </details>
+            </div>
 
-<section>
-    <h2>Before Arrival</h2>
+            <div>
+                <span class="eyebrow muted">Healthcare</span>
+                <h2>GP and Emergency Help</h2>
+                <details>
+                    <summary>How do I register with a GP?</summary>
+                    <p>New students can register with a GP through the UEA Medical Centre website or another local GP practice. GP registration is important for non-emergency healthcare.</p>
+                </details>
+                <details>
+                    <summary>What should I do in an emergency?</summary>
+                    <p>Call 999 for emergencies. Use NHS 111 for urgent medical advice that is not life-threatening.</p>
+                </details>
+                <details>
+                    <summary>Should I wait until I am ill to register?</summary>
+                    <p>No. Registering early makes it easier to access care if you need support later.</p>
+                </details>
+            </div>
+        </div>
+    </section>
 
-    <h3>Do I need a visa?</h3>
-    <p>If you do not already have immigration permission for the UK, you will normally need the correct student immigration route before UEA can register you formally.</p>
+    <section class="content-band">
+        <div class="content-wrap two-col">
+            <div>
+                <span class="eyebrow muted">Living in Norwich</span>
+                <h2>Accommodation and Transport</h2>
+                <details>
+                    <summary>Should I live on campus or in the city?</summary>
+                    <p>On-campus accommodation is convenient for classes and university support. City accommodation may suit students who prefer shops, restaurants and social spaces nearby.</p>
+                </details>
+                <details>
+                    <summary>What should I check before signing a contract?</summary>
+                    <p>Check rent, contract length, deposit, bills, location, travel time and cancellation rules.</p>
+                </details>
+                <details>
+                    <summary>How do I get from UEA to Norwich city centre?</summary>
+                    <p>Students commonly use local buses between UEA and Norwich city centre. Check route information and live times before travelling.</p>
+                </details>
+            </div>
 
-    <h3>Where can I get visa support?</h3>
-    <p>UEA has International Student Advisers within the Student Life Team. Students can contact them for visa and international student support.</p>
-</section>
-
-<section>
-    <h2>Healthcare</h2>
-
-    <h3>How do I register with a GP?</h3>
-    <p>New students can register with a GP through the UEA Medical Centre website. GP registration is important for accessing non-emergency healthcare in the UK.</p>
-
-    <h3>What should I do in an emergency?</h3>
-    <p>Call 999 for emergencies. Use NHS 111 for urgent medical advice that is not life-threatening.</p>
-</section>
-
-<section>
-    <h2>Accommodation</h2>
-
-    <h3>Should I live on campus or in the city?</h3>
-    <p>On-campus accommodation is convenient for classes and university support. City accommodation may be better for students who prefer shops, restaurants and social spaces nearby.</p>
-
-    <h3>What should I check before signing a contract?</h3>
-    <p>Check rent, contract length, deposit, bills, location and cancellation rules.</p>
-</section>
-
-<section>
-    <h2>Transport</h2>
-
-    <h3>How do I get from UEA to Norwich city centre?</h3>
-    <p>Students commonly use local buses between UEA and Norwich city centre. Check live times and tickets before travelling.</p>
-
-    <h3>Is cycling possible?</h3>
-    <p>Yes. UEA provides information about cycling routes and campus cycle storage.</p>
-</section>
-
-<section>
-    <h2>Daily Life</h2>
-
-    <h3>Where should I ask for help?</h3>
-    <p>Use UEA Student Services, your academic adviser, the Students’ Union, or trusted university staff. For international student matters, contact the international student support team.</p>
-
-    <h3>How can I meet people?</h3>
-    <p>Join societies, attend welcome events, join course groups and take part in international student activities.</p>
-</section>
-
+            <div>
+                <span class="eyebrow muted">Student life</span>
+                <h2>Support and Community</h2>
+                <details>
+                    <summary>Where should I ask for help?</summary>
+                    <p>Use UEA Student Services, your academic adviser, the Students' Union or trusted university staff. For international student matters, contact the international support team.</p>
+                </details>
+                <details>
+                    <summary>How can I meet people?</summary>
+                    <p>Join societies, attend welcome events, join course groups and take part in international student activities.</p>
+                </details>
+                <details>
+                    <summary>What if I feel overwhelmed?</summary>
+                    <p>Speak to Student Services or your academic adviser. Asking early is normal and can prevent small problems becoming harder to manage.</p>
+                </details>
+            </div>
+        </div>
+    </section>
 </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p><strong>International Student Hub</strong><br>Final Year Project - Qi Lin</p>
+        <p>Prototype for usability evaluation. Students should confirm live requirements with official UEA, UK government and provider websites.</p>
+    </div>
+</footer>
+
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+<script src="script.js"></script>
 </body>
 </html>

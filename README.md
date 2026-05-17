@@ -1,19 +1,35 @@
-Project: International Student Hub
+# International Student Hub
 
-Description:
-This project is a web-based prototype designed to support international students at UEA.
+Final year project prototype for supporting international students settling into life at UEA and Norwich.
 
-How to run:
-1. Open index.html in a web browser
-OR
-2. Visit GitHub Pages link: [your link]
+## How to run
 
-Contents:
-- HTML files (website pages)
-- CSS (style.css)
-- JavaScript (script.js)
-- Questionnaire data
-- Report
+Open `index.html` in a web browser.
 
-Notes:
-This is a prototype system and some features (e.g., search, language translation) are partially implemented.
+## Prototype features
+
+- Professional responsive homepage with site search
+- Cleaner navigation with a Guide dropdown
+- Accommodation, transport and events filters
+- Interactive banking document checklist
+- Prototype campus map with selectable locations
+- FAQ accordions
+- Prototype chatbot for common student questions
+- Working client-side language switching for English and Chinese
+- Thai and Vietnamese shown as future-work language options
+
+## Pages
+
+- `index.html` - homepage and central search
+- `guide.html` - first-weeks guide
+- `accommodation.html` - accommodation comparison
+- `banking.html` - UK bank account setup
+- `transport.html` - local travel guide
+- `map.html` - campus location guide
+- `faq.html` - frequently asked questions
+- `events.html` - student events and societies
+- `visa.html` - visa and immigration support
+
+## Note
+
+This is a Hi-Fi prototype for usability evaluation. Students should confirm live requirements with official UEA, UK government and provider websites.

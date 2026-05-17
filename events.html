@@ -3,81 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Events</title>
+    <title>Student Events - International Student Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<nav class="navbar">
-    <div class="nav-left">
-        <a href="index.html">Home</a>
-        <a href="guide.html">Guide</a>
-        <a href="accommodation.html">Accommodation</a>
-        <a href="banking.html">Banking</a>
-        <a href="transport.html">Transport</a>
-        <a href="map.html">Map</a>
-        <a href="faq.html">FAQ</a>
-        <a href="events.html">Events</a>
-        <a href="visa.html">Visa Support</a>
-    </div>
+<nav class="navbar" aria-label="Primary navigation">
+    <div class="nav-inner">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">ISH</span>
+            <span>
+                <strong>International Student Hub</strong>
+                <small>UEA arrival support</small>
+            </span>
+        </a>
 
-    <div class="nav-right">
-        <select class="language-select" onchange="changeLanguage(this.value)">
-            <option value="en">🌐 English</option>
-            <option value="zh">🇨🇳 中文</option>
-            <option value="ar">🇸🇦 العربية</option>
-            <option value="hi">🇮🇳 हिन्दी</option>
-            <option value="vi">🇻🇳 Tiếng Việt</option>
-        </select>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Guide</button>
+                <div class="nav-dropdown-menu">
+                    <a href="guide.html">New Student Guide</a>
+                    <a href="accommodation.html">Accommodation</a>
+                    <a href="banking.html">Banking</a>
+                    <a href="transport.html">Transport</a>
+                    <a href="map.html">Campus Map</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+            <a href="events.html">Events</a>
+            <a href="visa.html">Visa</a>
+            <button class="nav-chat-link" type="button" data-chat-open>Ask Hub</button>
+        </div>
+
+        <div class="nav-actions">
+            <select class="language-select" aria-label="Language preference">
+                <option value="en">English</option>
+                <option value="zh">Chinese</option>
+                <option value="th">Thai (future work)</option>
+                <option value="vi">Vietnamese (future work)</option>
+            </select>
+        </div>
     </div>
 </nav>
 
-<header>
-    <h1>Student Events</h1>
-    <p>Find social, cultural and society events for students at UEA.</p>
+<header class="page-hero">
+    <div class="content-wrap">
+        <span class="eyebrow">Community and belonging</span>
+        <h1>Student Events</h1>
+        <p>Find welcome activities, societies and wellbeing events that help international students build confidence and social connection.</p>
+    </div>
 </header>
 
-<main>
+<main id="main-content">
+    <section class="content-band surface filter-section">
+        <div class="content-wrap">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow muted">Discover activities</span>
+                    <h2>Event Types</h2>
+                    <p>Filter event examples by the kind of student experience you want to explore.</p>
+                </div>
+                <a class="button-link secondary" href="https://www.ueasu.org/events/" target="_blank" rel="noopener">Open UEASU events</a>
+            </div>
 
-<section>
-    <h2>Why Events Matter</h2>
-    <p>Joining events can help international students meet new people, practise English, explore local culture and feel more connected to university life.</p>
-</section>
+            <div class="filter-bar" aria-label="Event filters">
+                <button class="filter-chip active" type="button" data-filter="all">All</button>
+                <button class="filter-chip" type="button" data-filter="welcome">Welcome</button>
+                <button class="filter-chip" type="button" data-filter="social">Social</button>
+                <button class="filter-chip" type="button" data-filter="wellbeing">Wellbeing</button>
+                <button class="filter-chip" type="button" data-filter="skills">Skills</button>
+            </div>
 
-<section>
-    <h2>Find Current Events</h2>
-    <p>UEA Students’ Union lists upcoming events, including society activities, club nights, socials and cultural events.</p>
-    <p><a class="button-link" href="https://www.ueasu.org/events/" target="_blank">Open UEASU Events Page</a></p>
-    <p><a class="button-link" href="https://www.ueasu.org/events/all/" target="_blank">Browse All UEASU Events</a></p>
-</section>
+            <div class="card-grid">
+                <article class="event-card" data-category="welcome social">
+                    <span class="badge">Welcome</span>
+                    <h3>International welcome meetups</h3>
+                    <p>Low-pressure events for meeting other new students and asking practical questions.</p>
+                </article>
+                <article class="event-card" data-category="social">
+                    <span class="badge amber">Societies</span>
+                    <h3>Society taster sessions</h3>
+                    <p>Try activities linked to culture, hobbies, sport, faith, academic interests or volunteering.</p>
+                </article>
+                <article class="event-card" data-category="wellbeing">
+                    <span class="badge coral">Wellbeing</span>
+                    <h3>Sports and wellbeing activities</h3>
+                    <p>Useful for routine, confidence and meeting people outside your course.</p>
+                </article>
+                <article class="event-card" data-category="social welcome">
+                    <span class="badge">Campus life</span>
+                    <h3>Club nights and cultural events</h3>
+                    <p>Social events can help students explore local culture and build friendships.</p>
+                </article>
+                <article class="event-card" data-category="skills">
+                    <span class="badge amber">Skills</span>
+                    <h3>Academic and employability sessions</h3>
+                    <p>Workshops can support study skills, CV preparation and confidence using university services.</p>
+                </article>
+                <article class="event-card" data-category="skills wellbeing">
+                    <span class="badge coral">Volunteering</span>
+                    <h3>Community opportunities</h3>
+                    <p>Volunteering can help students practise English, gain experience and feel part of Norwich.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 
-<section>
-    <h2>Example Event Types</h2>
-    <ul>
-        <li>International welcome meetups.</li>
-        <li>Society events and taster sessions.</li>
-        <li>Sports and wellbeing activities.</li>
-        <li>Music, club nights and cultural events.</li>
-        <li>Volunteering and community activities.</li>
-    </ul>
-</section>
+    <section class="content-band">
+        <div class="content-wrap two-col">
+            <div>
+                <span class="eyebrow muted">New student confidence</span>
+                <h2>Tips Before Attending</h2>
+                <ul>
+                    <li>Check whether you need a ticket before going.</li>
+                    <li>Save the location and travel route in advance.</li>
+                    <li>Join one academic society and one non-academic society to widen your network.</li>
+                    <li>Attend early welcome events before routines become busy.</li>
+                </ul>
+                <div class="quick-links">
+                    <a class="button-link" href="https://www.ueasu.org/events/all/" target="_blank" rel="noopener">Browse all UEASU events</a>
+                    <a class="button-link secondary" href="map.html">Find campus locations</a>
+                </div>
+            </div>
 
-<section>
-    <h2>Tips for New Students</h2>
-    <ul>
-        <li>Check event location and ticket requirements before attending.</li>
-        <li>Join societies related to your interests or course.</li>
-        <li>Attend welcome events early in the semester to meet people.</li>
-        <li>Go with a friend if you feel nervous attending alone.</li>
-    </ul>
-</section>
-
+            <div class="callout">
+                <h3>Why this matters</h3>
+                <p class="muted">Questionnaire and testing feedback showed that international student support should include belonging and community, not only administrative tasks.</p>
+            </div>
+        </div>
+    </section>
 </main>
 
-<footer>
-    <p>Final Year Project — Qi Lin</p>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p><strong>International Student Hub</strong><br>Final Year Project - Qi Lin</p>
+        <p>Prototype for usability evaluation. Students should confirm live requirements with official UEA, UK government and provider websites.</p>
+    </div>
 </footer>
 
+<div class="toast" data-toast role="status" aria-live="polite"></div>
 <script src="script.js"></script>
 </body>
 </html>

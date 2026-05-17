@@ -3,186 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transport Guide</title>
+    <title>Transport Guide - International Student Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<nav class="navbar">
-    <div class="nav-left">
-        <a href="index.html">Home</a>
-        <a href="guide.html">Guide</a>
-        <a href="accommodation.html">Accommodation</a>
-        <a href="banking.html">Banking</a>
-        <a href="transport.html">Transport</a>
-        <a href="map.html">Map</a>
-        <a href="faq.html">FAQ</a>
-        <a href="events.html">Events</a>
-        <a href="visa.html">Visa Support</a>
-    </div>
+<nav class="navbar" aria-label="Primary navigation">
+    <div class="nav-inner">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">ISH</span>
+            <span>
+                <strong>International Student Hub</strong>
+                <small>UEA arrival support</small>
+            </span>
+        </a>
 
-    <div class="nav-right">
-        <select class="language-select" onchange="changeLanguage(this.value)">
-            <option value="en">🌐 English</option>
-            <option value="zh">🇨🇳 中文</option>
-            <option value="ar">🇸🇦 العربية</option>
-            <option value="hi">🇮🇳 हिन्दी</option>
-            <option value="vi">🇻🇳 Tiếng Việt</option>
-        </select>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Guide</button>
+                <div class="nav-dropdown-menu">
+                    <a href="guide.html">New Student Guide</a>
+                    <a href="accommodation.html">Accommodation</a>
+                    <a href="banking.html">Banking</a>
+                    <a href="transport.html">Transport</a>
+                    <a href="map.html">Campus Map</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+            <a href="events.html">Events</a>
+            <a href="visa.html">Visa</a>
+            <button class="nav-chat-link" type="button" data-chat-open>Ask Hub</button>
+        </div>
+
+        <div class="nav-actions">
+            <select class="language-select" aria-label="Language preference">
+                <option value="en">English</option>
+                <option value="zh">Chinese</option>
+                <option value="th">Thai (future work)</option>
+                <option value="vi">Vietnamese (future work)</option>
+            </select>
+        </div>
     </div>
 </nav>
 
-<header>
-    <h1>Transport Guide</h1>
-    <p>Practical travel information for UEA international students.</p>
+<header class="page-hero">
+    <div class="content-wrap">
+        <span class="eyebrow">Local travel</span>
+        <h1>Transport Guide</h1>
+        <p>Plan travel between UEA, Norwich city centre, Norwich railway station and other UK cities with clear route guidance.</p>
+    </div>
 </header>
 
-<main>
+<main id="main-content">
+    <section class="content-band surface filter-section">
+        <div class="content-wrap">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow muted">Route finder</span>
+                    <h2>Choose a Travel Mode</h2>
+                    <p>Filter the travel cards to see the option that best fits your journey.</p>
+                </div>
+            </div>
 
-<section>
-    <h2>Quick Travel Overview</h2>
-    <p>This page helps international students understand common travel options between UEA, Norwich city centre, Norwich railway station and other UK cities.</p>
+            <div class="filter-bar" aria-label="Transport filters">
+                <button class="filter-chip active" type="button" data-filter="all">All</button>
+                <button class="filter-chip" type="button" data-filter="bus">Bus</button>
+                <button class="filter-chip" type="button" data-filter="train">Train</button>
+                <button class="filter-chip" type="button" data-filter="cycling">Cycling</button>
+                <button class="filter-chip" type="button" data-filter="apps">Apps</button>
+            </div>
 
-    <div class="info-grid">
-        <div class="info-card">
-            <span class="badge">Most Common</span>
-            <h3>Bus</h3>
-            <p>Best for travelling between UEA, the city centre and Norwich railway station.</p>
+            <div class="card-grid">
+                <article class="option-card" data-category="bus apps">
+                    <span class="badge">Most common</span>
+                    <h3>Blue Line buses 25, 26 and 26A</h3>
+                    <p>Useful for travel between UEA, Norwich city centre and Norwich railway station. Always check live times before leaving.</p>
+                    <a href="https://www.firstbus.co.uk/norfolk-suffolk/routes-and-maps/network-norwich/blue-line-2526" target="_blank" rel="noopener">View First Bus route</a>
+                </article>
+
+                <article class="option-card" data-category="apps bus">
+                    <span class="badge amber">Live times</span>
+                    <h3>First Bus app</h3>
+                    <p>Plan journeys, save common routes, check live arrivals and review ticket options.</p>
+                    <a href="https://www.firstbus.co.uk/buy-tickets/ways-pay/first-bus-app" target="_blank" rel="noopener">View app information</a>
+                </article>
+
+                <article class="option-card" data-category="train apps">
+                    <span class="badge coral">Long distance</span>
+                    <h3>Norwich to London Liverpool Street</h3>
+                    <p>Greater Anglia operates services from Norwich to London Liverpool Street. Booking in advance can reduce cost.</p>
+                    <a href="https://www.greateranglia.co.uk/train-times/norwich-to-london-liverpool-street" target="_blank" rel="noopener">View route</a>
+                </article>
+
+                <article class="option-card" data-category="train">
+                    <span class="badge">Student saving</span>
+                    <h3>Railcards</h3>
+                    <p>Eligible students can compare railcards to reduce train costs for visits, airport journeys and UK travel.</p>
+                </article>
+
+                <article class="option-card" data-category="cycling">
+                    <span class="badge amber">Low cost</span>
+                    <h3>Cycling near campus</h3>
+                    <p>Useful for students living close to UEA. Use lights at night, secure cycle parking and a strong lock.</p>
+                </article>
+
+                <article class="option-card" data-category="bus train apps">
+                    <span class="badge coral">Planning habit</span>
+                    <h3>Check before travel</h3>
+                    <p>Bus and train times can change. Check live information before leaving accommodation or campus.</p>
+                </article>
+            </div>
         </div>
+    </section>
 
-        <div class="info-card">
-            <span class="badge">Long Distance</span>
-            <h3>Train</h3>
-            <p>Best for travelling to London, Cambridge, Ipswich and other UK cities.</p>
+    <section class="content-band">
+        <div class="content-wrap">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow muted">Recommendations</span>
+                    <h2>Common Student Journeys</h2>
+                    <p>Fast answers for the trips international students often ask about first.</p>
+                </div>
+            </div>
+
+            <div class="compare-list">
+                <div class="compare-row">
+                    <strong>UEA to city centre</strong>
+                    <span>Use Blue Line buses 25, 26 or 26A and check live arrivals before leaving.</span>
+                    <span>Best by bus</span>
+                </div>
+                <div class="compare-row">
+                    <strong>UEA to railway station</strong>
+                    <span>Use bus route information or the First Bus app to plan the connection.</span>
+                    <span>Check live times</span>
+                </div>
+                <div class="compare-row">
+                    <strong>Norwich to London</strong>
+                    <span>Use Greater Anglia services from Norwich to London Liverpool Street.</span>
+                    <span>Book early</span>
+                </div>
+                <div class="compare-row">
+                    <strong>Daily commuting</strong>
+                    <span>Compare bus passes, cycling time and weather before choosing a routine.</span>
+                    <span>Plan weekly</span>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="info-card">
-            <span class="badge">Flexible</span>
-            <h3>Cycling</h3>
-            <p>Useful for students living near campus or in nearby areas.</p>
+    <section class="content-band tint">
+        <div class="content-wrap two-col">
+            <div>
+                <span class="eyebrow muted">Travel confidence</span>
+                <h2>Before Your First Journey</h2>
+                <ul>
+                    <li>Save your accommodation address and UEA campus address.</li>
+                    <li>Check the final bus or train time if travelling at night.</li>
+                    <li>Keep your phone charged and carry a payment card.</li>
+                    <li>Use official travel apps or provider websites for live updates.</li>
+                </ul>
+            </div>
+            <div class="callout">
+                <h3>Usability improvement</h3>
+                <p class="muted">This page turns transport into task-based cards so users can scan by journey type rather than reading one long paragraph.</p>
+            </div>
         </div>
-    </div>
-</section>
-
-<section>
-    <h2>Bus Travel Around UEA</h2>
-    <p>Local buses are one of the easiest ways to travel between UEA and Norwich city centre. The Blue Line routes are especially useful for students.</p>
-
-    <div class="info-grid">
-        <div class="info-card">
-            <span class="badge">Blue Line</span>
-            <h3>Bus 25</h3>
-            <p>Travels between Norwich city / railway station and UEA. Useful for daily travel between campus and the city.</p>
-        </div>
-
-        <div class="info-card">
-            <span class="badge">Blue Line</span>
-            <h3>Bus 26</h3>
-            <p>Connects UEA with the city centre and railway station. Useful for shopping, social events and rail connections.</p>
-        </div>
-
-        <div class="info-card">
-            <span class="badge">Blue Line</span>
-            <h3>Bus 26A</h3>
-            <p>Another Blue Line service connected with UEA routes. Students should check live times before travelling.</p>
-        </div>
-    </div>
-
-    <p>UEA states that Blue Line buses 25, 26 and 26A run between Norwich railway station, city centre and campus. Journey time is around 30 minutes depending on traffic.</p>
-
-    <a class="button-link" href="https://www.firstbus.co.uk/norfolk-suffolk/routes-and-maps/network-norwich/blue-line-2526" target="_blank">
-        View First Bus Blue Line 25/26
-    </a>
-</section>
-
-<section>
-    <h2>Live Bus Times and First Bus App</h2>
-    <p>The First Bus app can help students plan journeys, save favourite routes and stops, and check live bus arrival times.</p>
-
-    <div class="info-grid">
-        <div class="info-card">
-            <h3>Plan Journey</h3>
-            <p>Enter your destination to find route options and nearby stops.</p>
-        </div>
-
-        <div class="info-card">
-            <h3>Live Arrivals</h3>
-            <p>Check which bus is arriving next before leaving home or campus.</p>
-        </div>
-
-        <div class="info-card">
-            <h3>Save Routes</h3>
-            <p>Save common routes such as UEA to Norwich city centre.</p>
-        </div>
-    </div>
-
-    <a class="button-link" href="https://www.firstbus.co.uk/buy-tickets/ways-pay/first-bus-app" target="_blank">
-        Download / View First Bus App
-    </a>
-</section>
-
-<section>
-    <h2>Travelling by Train</h2>
-    <p>Norwich railway station connects students to many UK destinations. Greater Anglia operates services between Norwich and London Liverpool Street.</p>
-
-    <div class="info-grid">
-        <div class="info-card">
-            <span class="badge">Popular Route</span>
-            <h3>Norwich → London Liverpool Street</h3>
-            <p>Useful for visiting London, travelling to airports, or connecting to other UK cities.</p>
-        </div>
-
-        <div class="info-card">
-            <span class="badge">Tip</span>
-            <h3>Book in Advance</h3>
-            <p>Advance tickets can be cheaper. Greater Anglia lists advance fares from £12 one-way when booked directly.</p>
-        </div>
-
-        <div class="info-card">
-            <span class="badge">Student Saving</span>
-            <h3>Railcard</h3>
-            <p>Students can consider a 16–25 Railcard or other eligible railcards to reduce train costs.</p>
-        </div>
-    </div>
-
-    <a class="button-link" href="https://www.greateranglia.co.uk/train-times/norwich-to-london-liverpool-street" target="_blank">
-        Greater Anglia: Norwich to London
-    </a>
-
-    <a class="button-link" href="https://www.greateranglia.co.uk/travel-information/timetables" target="_blank">
-        Greater Anglia Timetables
-    </a>
-</section>
-
-<section>
-    <h2>Cycling Around UEA</h2>
-    <p>Cycling can be a flexible and low-cost option for students living near campus. Students should use lights at night and a secure lock.</p>
-
-    <ul>
-        <li>Useful for students living close to campus.</li>
-        <li>Can reduce transport costs.</li>
-        <li>Always use bike lights and secure cycle parking.</li>
-        <li>Check safe routes before cycling at night.</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Quick Recommendations</h2>
-    <ul>
-        <li><strong>UEA to city centre:</strong> Use Blue Line buses 25, 26 or 26A.</li>
-        <li><strong>UEA to railway station:</strong> Use Blue Line bus services or check live routes in the First Bus app.</li>
-        <li><strong>Regular commuting:</strong> Consider bus passes or cycling.</li>
-        <li><strong>Travelling to London:</strong> Use Greater Anglia from Norwich to London Liverpool Street.</li>
-        <li><strong>Before travelling:</strong> Always check live bus or train times.</li>
-    </ul>
-</section>
-
+    </section>
 </main>
 
-<footer>
-    <p>Final Year Project — Qi Lin</p>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p><strong>International Student Hub</strong><br>Final Year Project - Qi Lin</p>
+        <p>Prototype for usability evaluation. Students should confirm live requirements with official UEA, UK government and provider websites.</p>
+    </div>
 </footer>
 
+<div class="toast" data-toast role="status" aria-live="polite"></div>
 <script src="script.js"></script>
 </body>
 </html>

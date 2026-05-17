@@ -3,124 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bank Account Setup</title>
+    <title>Bank Account Setup - International Student Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
-<nav class="navbar">
-    <div class="nav-left">
-        <a href="index.html">Home</a>
-        <a href="guide.html">Guide</a>
-        <a href="accommodation.html">Accommodation</a>
-        <a href="banking.html">Banking</a>
-        <a href="transport.html">Transport</a>
-        <a href="map.html">Map</a>
-        <a href="faq.html">FAQ</a>
-        <a href="events.html">Events</a>
-        <a href="visa.html">Visa Support</a>
-    </div>
+<nav class="navbar" aria-label="Primary navigation">
+    <div class="nav-inner">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">ISH</span>
+            <span>
+                <strong>International Student Hub</strong>
+                <small>UEA arrival support</small>
+            </span>
+        </a>
 
-    <div class="nav-right">
-        <select class="language-select" onchange="changeLanguage(this.value)">
-            <option value="en">🌐 English</option>
-            <option value="zh">🇨🇳 中文</option>
-            <option value="ar">🇸🇦 العربية</option>
-            <option value="hi">🇮🇳 हिन्दी</option>
-            <option value="vi">🇻🇳 Tiếng Việt</option>
-        </select>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Guide</button>
+                <div class="nav-dropdown-menu">
+                    <a href="guide.html">New Student Guide</a>
+                    <a href="accommodation.html">Accommodation</a>
+                    <a href="banking.html">Banking</a>
+                    <a href="transport.html">Transport</a>
+                    <a href="map.html">Campus Map</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+            <a href="events.html">Events</a>
+            <a href="visa.html">Visa</a>
+            <button class="nav-chat-link" type="button" data-chat-open>Ask Hub</button>
+        </div>
+
+        <div class="nav-actions">
+            <select class="language-select" aria-label="Language preference">
+                <option value="en">English</option>
+                <option value="zh">Chinese</option>
+                <option value="th">Thai (future work)</option>
+                <option value="vi">Vietnamese (future work)</option>
+            </select>
+        </div>
     </div>
 </nav>
 
-<header>
-    <h1>Bank Account Setup</h1>
-    <p>Step-by-step banking guidance for international students in Norwich.</p>
+<header class="page-hero">
+    <div class="content-wrap">
+        <span class="eyebrow">Money setup</span>
+        <h1>Bank Account Setup</h1>
+        <p>Practical steps and document checks for international students preparing to open a UK bank account.</p>
+    </div>
 </header>
 
-<main>
+<main id="main-content">
+    <section class="content-band surface">
+        <div class="content-wrap two-col">
+            <div>
+                <span class="eyebrow muted">Process</span>
+                <h2>Step-by-Step Banking Plan</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="when">Step 1</div>
+                        <div>
+                            <h3>Compare banks</h3>
+                            <p class="muted">Check online application options, branch access, app reviews, fees and document rules.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="when">Step 2</div>
+                        <div>
+                            <h3>Prepare documents</h3>
+                            <p class="muted">Gather identity, student status and UK address evidence before applying.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="when">Step 3</div>
+                        <div>
+                            <h3>Apply and verify identity</h3>
+                            <p class="muted">Apply online or book a branch appointment, then wait for identity checks and account approval.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="when">Step 4</div>
+                        <div>
+                            <h3>Activate safely</h3>
+                            <p class="muted">Set up online banking, keep security details private and activate your debit card.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<section>
-    <h2>Why Open a UK Bank Account?</h2>
-    <p>A UK bank account can make everyday student life easier. It can help with paying rent, receiving refunds, using contactless payments, managing subscriptions, and avoiding some international card fees.</p>
-</section>
+            <aside class="checklist-panel" aria-label="Document checklist">
+                <span class="eyebrow muted">Interactive checklist</span>
+                <h2>Documents Ready?</h2>
+                <p class="muted" data-progress-label>0 of 5 documents ready</p>
+                <div class="progress-track" aria-hidden="true">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="checklist">
+                    <label class="check-item"><input type="checkbox"> Passport or national identity document</label>
+                    <label class="check-item"><input type="checkbox"> UEA enrolment or student status confirmation</label>
+                    <label class="check-item"><input type="checkbox"> UK address or accommodation confirmation</label>
+                    <label class="check-item"><input type="checkbox"> Visa or immigration status information if requested</label>
+                    <label class="check-item"><input type="checkbox"> Phone number and email access for verification</label>
+                </div>
+            </aside>
+        </div>
+    </section>
 
-<section>
-    <h2>Step-by-Step Process</h2>
-    <ol>
-        <li>Compare different banks and account types.</li>
-        <li>Prepare your documents.</li>
-        <li>Apply online or book an appointment at a branch.</li>
-        <li>Wait for approval and identity checks.</li>
-        <li>Activate online banking and your debit card.</li>
-    </ol>
-</section>
+    <section class="content-band">
+        <div class="content-wrap">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow muted">Bank options</span>
+                    <h2>Examples to Compare</h2>
+                    <p>UEA does not recommend one specific bank. These examples help students understand what to compare.</p>
+                </div>
+            </div>
 
-<section>
-    <h2>Documents You May Need</h2>
-    <ul>
-        <li>Passport or national ID card.</li>
-        <li>Student ID or university enrolment confirmation.</li>
-        <li>Proof of address in the UK.</li>
-        <li>Visa or immigration status information if requested.</li>
-    </ul>
-    <p>Requirements can vary between banks, so students should always check the bank’s own website before applying.</p>
-</section>
+            <div class="grid">
+                <article class="info-card">
+                    <span class="badge">Branch access</span>
+                    <h3>HSBC</h3>
+                    <p>Useful for students who want a familiar international banking brand with online banking and branch support.</p>
+                </article>
+                <article class="info-card">
+                    <span class="badge amber">High street bank</span>
+                    <h3>Barclays</h3>
+                    <p>A widely used UK bank option. Students should check current local services and application requirements.</p>
+                </article>
+                <article class="info-card">
+                    <span class="badge coral">UK network</span>
+                    <h3>Lloyds Bank</h3>
+                    <p>May suit students who want a traditional bank with online services and a UK-wide presence.</p>
+                </article>
+                <article class="info-card">
+                    <span class="badge">Locator tools</span>
+                    <h3>NatWest</h3>
+                    <p>Provides online tools for finding branches, banking hubs and ATMs before visiting.</p>
+                </article>
+                <article class="info-card">
+                    <span class="badge amber">Digital banks</span>
+                    <h3>App-based options</h3>
+                    <p>Some students compare digital banks for quick setup, but document and eligibility requirements still matter.</p>
+                </article>
+                <article class="info-card">
+                    <span class="badge coral">Safety</span>
+                    <h3>Avoid scams</h3>
+                    <p>Never share banking passwords, one-time codes or card details with anyone claiming to "help" open an account.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 
-<section>
-    <h2>Possible Bank Options in Norwich</h2>
-    <p>UEA does not officially recommend one specific bank. The options below are examples of banks students commonly compare when choosing a UK account.</p>
-
-    <h3>HSBC</h3>
-    <p>HSBC has a Norwich branch on London Street. This may be useful for students who prefer a bank with international experience and in-person branch access.</p>
-    <ul>
-        <li>Possible benefit: familiar international banking brand.</li>
-        <li>Good for: students who want online banking plus branch access.</li>
-    </ul>
-
-    <h3>Barclays</h3>
-    <p>Barclays has banking locations in Norwich, including records showing a Barclays presence at the University of East Anglia Banking Hall, University Plain, NR4 7AF.</p>
-    <ul>
-        <li>Possible benefit: convenient if campus-based services are available.</li>
-        <li>Good for: students who prefer a widely used UK bank.</li>
-    </ul>
-
-    <h3>Lloyds Bank</h3>
-    <p>Lloyds lists banking locations in Norwich and provides online banking services. It may be useful for students who want a traditional high street bank.</p>
-    <ul>
-        <li>Possible benefit: UK-wide banking network.</li>
-        <li>Good for: students who want both online and branch services.</li>
-    </ul>
-
-    <h3>NatWest</h3>
-    <p>NatWest provides a branch and service locator that students can use to find nearby branches, banking hubs or ATMs.</p>
-    <ul>
-        <li>Possible benefit: easy online branch/service search.</li>
-        <li>Good for: students who want to compare nearby services before visiting.</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Choosing a Bank: Quick Checklist</h2>
-    <ul>
-        <li>Can you apply online?</li>
-        <li>Does the bank accept your documents?</li>
-        <li>Is there a branch or ATM near campus or your accommodation?</li>
-        <li>Is the mobile banking app easy to use?</li>
-        <li>Are there any account fees or international transfer charges?</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Important Note</h2>
-    <p>This prototype provides general information only. Students should check official bank websites and UEA guidance before making financial decisions.</p>
-</section>
-
+    <section class="content-band tint">
+        <div class="content-wrap two-col">
+            <div>
+                <span class="eyebrow muted">Choosing well</span>
+                <h2>Quick Questions</h2>
+                <ul>
+                    <li>Can you apply online with your documents?</li>
+                    <li>Is there a branch, ATM or banking hub near campus or your accommodation?</li>
+                    <li>Are there monthly fees, transfer fees or international card charges?</li>
+                    <li>Does the mobile app work well for everyday student life?</li>
+                </ul>
+            </div>
+            <div class="callout">
+                <h3>Important note</h3>
+                <p class="muted">This prototype provides general information only. Students should check official bank websites and UEA guidance before making financial decisions.</p>
+            </div>
+        </div>
+    </section>
 </main>
 
-<footer>
-    <p>Final Year Project — Qi Lin</p>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p><strong>International Student Hub</strong><br>Final Year Project - Qi Lin</p>
+        <p>Prototype for usability evaluation. Students should confirm live requirements with official UEA, UK government and provider websites.</p>
+    </div>
 </footer>
 
+<div class="toast" data-toast role="status" aria-live="polite"></div>
 <script src="script.js"></script>
 </body>
 </html>
