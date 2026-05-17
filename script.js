@@ -63,6 +63,12 @@ const searchItems = [
         tags: "visa immigration student route ukvi right to study work conditions"
     },
     {
+        title: "Feedback",
+        url: "feedback.html",
+        description: "Prototype feedback form for usability testing and participant comments.",
+        tags: "feedback contact form usability testing rating comments suggestions"
+    },
+    {
         title: "FAQ",
         url: "faq.html",
         description: "Quick answers for arrival, healthcare, accommodation, transport and daily life.",
@@ -86,6 +92,7 @@ const zhTranslations = {
     "FAQ": "常见问题",
     "Events": "活动",
     "Visa": "签证",
+    "Feedback": "反馈",
     "Ask Hub": "询问中心",
     "English": "英语",
     "Chinese": "中文",
@@ -162,6 +169,46 @@ const zhTranslations = {
     "Visa and Immigration Support": "签证和移民支持",
     "Common Support Topics": "常见支持主题",
     "Important Reminder": "重要提醒",
+    "Prototype feedback": "原型反馈",
+    "Feedback Form": "反馈表单",
+    "Use this page during usability testing to record whether participants can find and submit feedback in the prototype.": "在可用性测试中使用此页面，记录参与者是否能够在原型中找到并提交反馈。",
+    "Usability testing": "可用性测试",
+    "Submit Feedback": "提交反馈",
+    "This form supports the observation task sheet. It behaves like a real feedback form, but it does not send, store or share any information.": "此表单用于支持观察任务表。它的交互方式类似真实反馈表单，但不会发送、存储或分享任何信息。",
+    "Prototype only": "仅用于原型",
+    "No message is stored or sent. The confirmation is shown only in the browser so the interaction can be tested safely.": "不会存储或发送任何消息。确认提示只会显示在浏览器中，因此可以安全测试交互。",
+    "Name or participant code (optional)": "姓名或参与者编号（可选）",
+    "Feedback topic": "反馈主题",
+    "Select a topic": "选择主题",
+    "Navigation": "导航",
+    "Information clarity": "信息清晰度",
+    "Visual design": "视觉设计",
+    "Language support": "语言支持",
+    "Hub Assistant chatbot": "中心助手聊天机器人",
+    "Overall rating": "总体评分",
+    "Select a rating": "选择评分",
+    "5 - Very satisfied": "5 - 非常满意",
+    "4 - Satisfied": "4 - 满意",
+    "3 - Neutral": "3 - 一般",
+    "2 - Unsatisfied": "2 - 不满意",
+    "1 - Very unsatisfied": "1 - 非常不满意",
+    "Comments or suggestions": "评论或建议",
+    "Submit feedback": "提交反馈",
+    "Clear form": "清空表单",
+    "Please complete the topic, rating and comments before submitting.": "请在提交前填写反馈主题、评分和评论。",
+    "Thank you. This prototype has shown a confirmation only; no feedback was stored or sent.": "谢谢。此原型只显示确认信息；反馈没有被存储或发送。",
+    "Evaluation evidence": "评估证据",
+    "What This Tests": "此页面测试什么",
+    "The page gives participants a clear final task and lets the researcher observe form completion, validation and confirmation feedback.": "该页面为参与者提供明确的最终任务，并让研究者观察表单填写、验证和确认反馈。",
+    "Task completion": "任务完成",
+    "Can users find feedback?": "用户能找到反馈页面吗？",
+    "The Feedback link is visible in the main navigation so participants can locate it without needing to search.": "反馈链接显示在主导航中，因此参与者无需搜索即可找到。",
+    "Form clarity": "表单清晰度",
+    "Can users complete fields?": "用户能完成表单填写吗？",
+    "Required fields, labels and placeholder text help test whether the form is understandable.": "必填项、标签和占位文字有助于测试表单是否易于理解。",
+    "Ethics safe": "符合伦理安全",
+    "No data collection": "不收集数据",
+    "The form confirms the action on screen only, keeping the prototype aligned with safe testing.": "表单只在屏幕上确认操作，使原型保持安全测试要求。",
     "Key Campus Locations": "校园关键地点",
     "Interactive prototype": "交互式原型",
     "Library": "图书馆",
@@ -185,6 +232,7 @@ const zhTranslations = {
     "Open FAQ": "打开常见问题",
     "Open campus map": "打开校园地图",
     "Open events page": "打开活动页面",
+    "Open feedback form": "打开反馈表单",
     "Open student guide": "打开学生指南",
     "No exact match found. Try banking, visa, bus, accommodation or GP.": "没有找到完全匹配。请尝试搜索银行、签证、公交、住宿或 GP。"
 };
@@ -192,7 +240,9 @@ const zhTranslations = {
 // Placeholder text needs separate handling because it is stored in attributes, not text nodes.
 const zhPlaceholders = {
     "Search banking, visa, GP, buses, accommodation...": "搜索银行、签证、GP、公交、住宿...",
-    "Ask about banking, buses, GP, visa...": "询问银行、公交、GP、签证..."
+    "Ask about banking, buses, GP, visa...": "询问银行、公交、GP、签证...",
+    "e.g. Participant 1": "例如：参与者 1",
+    "Write one thing that worked well or one thing that could be improved.": "写下一项做得好的地方，或一项可以改进的地方。"
 };
 
 // First chatbot message shown when the Hub Assistant is opened.
@@ -260,6 +310,13 @@ const chatbotAnswers = [
         zh: "活动和社团可以帮助国际学生认识朋友、练习英语并更好融入校园生活。"
     },
     {
+        keywords: ["feedback", "contact", "form", "comment", "suggestion", "rating"],
+        link: "feedback.html",
+        linkText: "Open feedback form",
+        en: "The feedback page lets users test a prototype form. It shows a confirmation message only; no message is stored or sent.",
+        zh: "反馈页面可用于测试原型表单。它只显示确认消息；不会存储或发送任何内容。"
+    },
+    {
         keywords: ["guide", "first week", "arrival", "registration", "student id", "blackboard", "evision"],
         link: "guide.html",
         linkText: "Open student guide",
@@ -285,6 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initFilters();
     initChecklist();
     initCampusMap();
+    initFeedbackForm();
     initChatbot();
 });
 
@@ -575,6 +633,53 @@ function initCampusMap() {
                 <p>${pin.dataset.description}</p>
             `;
         });
+    });
+}
+
+// Set up the prototype feedback form used in the usability testing task sheet.
+function initFeedbackForm() {
+    const form = document.querySelector("[data-feedback-form]");
+    if (!form) {
+        // Only the Feedback page has this form, so other pages can skip it.
+        return;
+    }
+
+    const status = form.querySelector("[data-feedback-status]");
+    const requiredFields = [...form.querySelectorAll("[required]")];
+
+    form.addEventListener("submit", (event) => {
+        // Prevent a real submit because this is a static prototype with no backend.
+        event.preventDefault();
+
+        const missingFields = requiredFields.filter((field) => !field.value.trim());
+        requiredFields.forEach((field) => {
+            field.setAttribute("aria-invalid", String(missingFields.includes(field)));
+        });
+
+        if (missingFields.length > 0) {
+            status.textContent = translate("Please complete the topic, rating and comments before submitting.");
+            status.className = "form-status error";
+            missingFields[0].focus();
+            return;
+        }
+
+        // Read the form once to prove the interaction works, but do not store or send it.
+        new FormData(form);
+        status.textContent = translate("Thank you. This prototype has shown a confirmation only; no feedback was stored or sent.");
+        status.className = "form-status success";
+        showToast(translate("Thank you. This prototype has shown a confirmation only; no feedback was stored or sent."));
+        form.querySelectorAll("input, select, textarea").forEach((field) => {
+            field.value = "";
+        });
+        requiredFields.forEach((field) => field.setAttribute("aria-invalid", "false"));
+    });
+
+    form.addEventListener("reset", () => {
+        requiredFields.forEach((field) => field.setAttribute("aria-invalid", "false"));
+        if (status) {
+            status.textContent = "";
+            status.className = "form-status";
+        }
     });
 }
 

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - International Student Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<nav class="navbar" aria-label="Primary navigation">
+    <div class="nav-inner">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">ISH</span>
+            <span>
+                <strong>International Student Hub</strong>
+                <small>UEA arrival support</small>
+            </span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <div class="nav-dropdown">
+                <button class="nav-dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false">Guide</button>
+                <div class="nav-dropdown-menu">
+                    <a href="guide.html">New Student Guide</a>
+                    <a href="accommodation.html">Accommodation</a>
+                    <a href="banking.html">Banking</a>
+                    <a href="transport.html">Transport</a>
+                    <a href="map.html">Campus Map</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+            </div>
+            <a href="events.html">Events</a>
+            <a href="visa.html">Visa</a>
+            <a href="feedback.html">Feedback</a>
+            <button class="nav-chat-link" type="button" data-chat-open>Ask Hub</button>
+        </div>
+
+        <div class="nav-actions">
+            <select class="language-select" aria-label="Language preference">
+                <option value="en">English</option>
+                <option value="zh">Chinese</option>
+                <option value="th">Thai (future work)</option>
+                <option value="vi">Vietnamese (future work)</option>
+            </select>
+        </div>
+    </div>
+</nav>
+
+<header class="page-hero">
+    <div class="content-wrap">
+        <span class="eyebrow">Prototype feedback</span>
+        <h1>Feedback Form</h1>
+        <p>Use this page during usability testing to record whether participants can find and submit feedback in the prototype.</p>
+    </div>
+</header>
+
+<main id="main-content">
+    <section class="content-band surface">
+        <div class="content-wrap two-col">
+            <div>
+                <span class="eyebrow muted">Usability testing</span>
+                <h2>Submit Feedback</h2>
+                <p class="muted">This form supports the observation task sheet. It behaves like a real feedback form, but it does not send, store or share any information.</p>
+
+                <div class="callout">
+                    <h3>Prototype only</h3>
+                    <p class="muted">No message is stored or sent. The confirmation is shown only in the browser so the interaction can be tested safely.</p>
+                </div>
+            </div>
+
+            <form class="feedback-form" data-feedback-form novalidate>
+                <div class="form-grid">
+                    <label class="form-field" for="feedback-name">
+                        <span>Name or participant code (optional)</span>
+                        <input id="feedback-name" name="name" type="text" autocomplete="off" placeholder="e.g. Participant 1">
+                    </label>
+
+                    <label class="form-field" for="feedback-topic">
+                        <span>Feedback topic</span>
+                        <select id="feedback-topic" name="topic" required>
+                            <option value="">Select a topic</option>
+                            <option value="navigation">Navigation</option>
+                            <option value="content">Information clarity</option>
+                            <option value="design">Visual design</option>
+                            <option value="language">Language support</option>
+                            <option value="chatbot">Hub Assistant chatbot</option>
+                        </select>
+                    </label>
+
+                    <label class="form-field" for="feedback-rating">
+                        <span>Overall rating</span>
+                        <select id="feedback-rating" name="rating" required>
+                            <option value="">Select a rating</option>
+                            <option value="5">5 - Very satisfied</option>
+                            <option value="4">4 - Satisfied</option>
+                            <option value="3">3 - Neutral</option>
+                            <option value="2">2 - Unsatisfied</option>
+                            <option value="1">1 - Very unsatisfied</option>
+                        </select>
+                    </label>
+
+                    <label class="form-field form-field-wide" for="feedback-message">
+                        <span>Comments or suggestions</span>
+                        <textarea id="feedback-message" name="message" rows="6" required placeholder="Write one thing that worked well or one thing that could be improved."></textarea>
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button class="primary-link" type="submit">Submit feedback</button>
+                    <button class="button-link secondary" type="reset">Clear form</button>
+                </div>
+
+                <p class="form-status" data-feedback-status role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+
+    <section class="content-band">
+        <div class="content-wrap">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow muted">Evaluation evidence</span>
+                    <h2>What This Tests</h2>
+                    <p>The page gives participants a clear final task and lets the researcher observe form completion, validation and confirmation feedback.</p>
+                </div>
+            </div>
+
+            <div class="grid">
+                <article class="info-card">
+                    <span class="badge">Task completion</span>
+                    <h3>Can users find feedback?</h3>
+                    <p>The Feedback link is visible in the main navigation so participants can locate it without needing to search.</p>
+                </article>
+                <article class="info-card">
+                    <span class="badge amber">Form clarity</span>
+                    <h3>Can users complete fields?</h3>
+                    <p>Required fields, labels and placeholder text help test whether the form is understandable.</p>
+                </article>
+                <article class="info-card">
+                    <span class="badge coral">Ethics safe</span>
+                    <h3>No data collection</h3>
+                    <p>The form confirms the action on screen only, keeping the prototype aligned with safe testing.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <p><strong>International Student Hub</strong><br>Final Year Project - Qi Lin</p>
+        <p>Prototype for usability evaluation. Students should confirm live requirements with official UEA, UK government and provider websites.</p>
+    </div>
+</footer>
+
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
